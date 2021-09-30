@@ -6,16 +6,20 @@ class Database{
    private $username = "root";
    private $password = "root";
    public $conn;
+
+   public function __construct(){
+      getConnection();
+   }
+   
    public function getConnection(){
-       $this->conn = null;
-       try
-{
-   $this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
-}
-catch(Exception $e)
-{
-   echo "Fout tijdens verbinden: " . $e->getMessage();
-}
-       return $this->conn;
+      $this->conn = null;
+      try{
+         $this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
+      }
+      catch(Exception $e)
+      {
+         echo "Fout tijdens verbinden: " . $e->getMessage();
+      }
+      return $this->conn;
    }
 }

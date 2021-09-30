@@ -20,10 +20,12 @@ if($num>0){
    // products array
    $products_arr=array();
    // product data ophalen
+   $id = 0;
    while ($row = $result->fetch_assoc()){
        // extract row
        // this will make $row['name'] to
        // just $name only
+       
        extract($row);
        $product_item=array(
            "id" => $id,
