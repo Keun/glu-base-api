@@ -8,7 +8,7 @@ class Database{
    public $conn;
 
    public function __construct(){
-      getConnection();
+      $this->getConnection();
    }
    
    public function getConnection(){
