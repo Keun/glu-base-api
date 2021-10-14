@@ -13,11 +13,32 @@ class Product
        $this->conn = $db;
    }
    // read products
-   function read()
+   public function read()
    {
        // select all query
        $query = "SELECT * FROM " . $this->table_name;
        $result = $this->conn->query($query);
+       return $result;
+   }
+   
+   // create products
+   public function create($insertArray)
+   {
+        var_dump($insertArray);
+       
+        echo "<br>";
+
+       // select all query
+       $insertQuery = "INSERT INTO `product` (`naam`, `beschrijving`, `prijs`) VALUES ('".$insertArray['naam']."', '".$insertArray['beschrijving']."', '".$insertArray['prijs']."');";
+
+       echo $insertQuery;
+
+       //exit();
+
+       //$query = "SELECT * FROM " . $this->table_name;
+       $result = $this->conn->query($insertQuery);
+
+       var_dump($result);
        return $result;
    }
 }
