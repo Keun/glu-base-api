@@ -27,6 +27,7 @@ class Product
         var_dump($insertArray);
        
         echo "<br>";
+        echo "dit is voor MAx";
 
        // select all query
        $insertQuery = "INSERT INTO `product` (`naam`, `beschrijving`, `prijs`) VALUES ('".$insertArray['naam']."', '".$insertArray['beschrijving']."', '".$insertArray['prijs']."');";
