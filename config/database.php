@@ -1,10 +1,16 @@
 <?php
 class Database{
    // Database instellingen
+   // private $host = "localhost";
+   // private $db_name = "api";
+   // private $username = "root";
+   // private $password = "root";
+   // Windows instellingen
    private $host = "localhost";
    private $db_name = "api";
    private $username = "root";
-   private $password = "root";
+   private $password = "";
+
    public $conn;
 
    public function __construct(){
